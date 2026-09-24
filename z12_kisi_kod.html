@@ -1,0 +1,40 @@
+<html> 
+   <body> 
+     <textarea cols="90" rows="24"> 
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>KISIELOW EISEN 12</title>
+</head>
+<body>
+<div style="color:green;font-size:37px;"> 
+<script language="JavaScript">
+
+var D1_kis = prompt("Podaj pierwszy dzień stycznia (D1):","");
+var G1_kis = prompt("Podaj pierwszą godzinę (G1):","");
+var D2_kis = prompt("Podaj drugi dzień stycznia (D2):","");
+var G2_kis = prompt("Podaj drugą godzinę (G2):","");
+
+var D1 = parseFloat(D1_kis);
+var G1 = parseFloat(G1_kis);
+var D2 = parseFloat(D2_kis);
+var G2 = parseFloat(G2_kis);
+
+var sekundy = ((D1 * 24 + G1) - (D2 * 24 + G2)) * 3600;
+
+document.write("Ilość sekund między dniem " + D1 + " godz. " + G1 + 
+" a dniem " + D2 + " godz. " + G2 + " wynosi: " + sekundy + " sekund<br>");
+
+function okno_zamknij_kisi() {
+  window.close();
+}
+</script>
+</div>
+<br>
+<input type="button" value="Zamknij okno" onclick="okno_zamknij_kisi()"/>
+</body>
+</html>
+     </textarea> 
+    </body> 
+</html> 
