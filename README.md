@@ -1,1 +1,1 @@
-# zadania-od-6
+https://eisenkisielof-byte.github.io/zadania-od-6/
