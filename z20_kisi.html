@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Zadanie 20 </title>
+  <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+  <h1>Trójkąt - długości boków</h1>
+  <form>
+    Punkt A: x = <input type="text" id="xa_kisi" value="0">
+    y = <input type="text" id="ya_kisi" value="0"><br><br>
+    Punkt B: x = <input type="text" id="xb_kisi" value="0">
+    y = <input type="text" id="yb_kisi" value="0"><br><br>
+    Punkt C: x = <input type="text" id="xc_kisi" value="0">
+    y = <input type="text" id="yc_kisi" value="0"><br><br>
+  </form>
+  <input type="button" value="Oblicz długości boków" onclick="obliczBoki()">
+  <div style="color:red; font-size:50px;" id="wyniki"></div>
+  <script>
+    function AB_kis(xa, ya, xb, yb) {
+      return Math.sqrt(Math.pow(xb - xa, 2) + Math.pow(yb - ya, 2));
+    }
+    function BC_kis(xb, yb, xc, yc) {
+      return Math.sqrt(Math.pow(xc - xb, 2) + Math.pow(yc - yb, 2));
+    }
+    function AC_kis(xa, ya, xc, yc) {
+      return Math.sqrt(Math.pow(xc - xa, 2) + Math.pow(yc - ya, 2));
+    }
+    function obliczBoki() {
+      var xa_kisi = parseFloat(document.getElementById('xa_kisi').value);
+      var ya_kisi = parseFloat(document.getElementById('ya_kisi').value);
+      var xb_kisi = parseFloat(document.getElementById('xb_kisi').value);
+      var yb_kisi = parseFloat(document.getElementById('yb_kisi').value);
+      var xc_kisi = parseFloat(document.getElementById('xc_kisi').value);
+      var yc_kisi = parseFloat(document.getElementById('yc_kisi').value);
+
+      var ab = AB_kis(xa_kisi, ya_kisi, xb_kisi, yb_kisi);
+      var bc = BC_kis(xb_kisi, yb_kisi, xc_kisi, yc_kisi);
+      var ac = AC_kis(xa_kisi, ya_kisi, xc_kisi, yc_kisi);
+
+      document.getElementById('wyniki').innerHTML =
+        "AB = " + ab.toFixed(2) + " <br>BC = " + bc.toFixed(2) + " <br>AC = " + ac.toFixed(2);
+    }
+  </script>
+</body>
+
+</html>
