@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+ <head>
+ <title> ZADANIE 24 </title>
+ <meta charset="utf-8">
+ </head>
+<body>
+ <div style="color:blue;background-color:grey;font-size:50px;">
+ <script language="JavaScript">
+ var x1_kis<!DOCTYPE html>
+ <head>
+ <title> cwiczenie 24 </title>
+ <meta charset="utf-8">
+ </head>
+<body>
+ <div style="color:blue;background-color:grey;font-size:50px;">
+ <script language="JavaScript">
+ var x1_kis=parseFloat(prompt("x1=",""));
+ var x2_kis=parseFloat(prompt("x2=",""));
+
+ function y1_kis(x1) {
+ return 3 * Math.pow(x1_kis, 6/8);
+}
+
+function x1_rad(x1) {
+var st_kis=x1_kis;
+return (st_kis * Math.PI) / 180;
+}
+
+function y2_kis(x1){
+var st_kis=x1_kis;
+var rad_kis=(st_kis * Math.PI) / 180;
+return 2 * Math.cos(rad_kis) + 3 * Math.sin(rad_kis);
+}
+
+function y3_kis(x1,x2) {
+var x1_5= Math.pow(x1_kis, 5);
+var x2_4= Math.pow(x2_kis, 4);
+var x1_x2= Math.abs(x1_kis - x2_kis);
+var pierwiastek= Math.cbrt(x1_5 + 2 * x2_4);
+return pierwiastek * x1_x2;
+}
+
+var y1_wyn =y1_kis(x1_kis);
+var y2_wyn =y2_kis(x1_kis);
+var y3_wyn =y3_kis(x1_kis,x2_kis);
+var x1_radi= x1_rad(x1_kis);
+
+document.write("x1= " +x1_kis+"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"); 
+document.write("x2= " +x2_kis+"<br>");
+document.write("x1(s)= " +x1_kis+"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp");
+document.write("x1(r)= " +x1_radi.toFixed(2)+"<br>");
+document.write("y1= " +y1_wyn.toFixed(2)+"<br>");
+document.write("y2= " +y2_wyn.toFixed(2)+"<br>");
+document.write("y3= " +y3_wyn.toFixed(2)+"<br>");
+
+</script>
+</div>
+</body>
+</html>
